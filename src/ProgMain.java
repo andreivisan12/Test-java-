@@ -52,18 +52,6 @@ public class ProgMain {
        players = p.sortByPoints(players,sortLambda);
         for (Player o: players)
            System.out.println(o.toString());
-//        Map<String, Optional<Player>> topScorers = players.stream().collect(Collectors.groupingBy(player -> player.getTeamName(),
-//                Collectors.maxBy(Comparator.comparingInt(Player::getPoints))));
-//        Map<String,Double> unorderedAverages = players.stream().collect(Collectors.groupingBy(Player::getTeamName,
-//                Collectors.averagingDouble(Player::getPoints)));
-//        Map<String, Double> sortedAverages = unorderedAverages.entrySet().stream()
-//                .sorted(Map.Entry.<String, Double>comparingByValue().reversed()) // .reversed() puts highest at the top
-//                .collect(Collectors.toMap(
-//                        Map.Entry::getKey,          // Keep the team name as the Key
-//                        Map.Entry::getValue,        // Keep the average as the Value
-//                        (oldValue, newValue) -> oldValue, // (Required by Java) What to do if there's a duplicate key
-//                        LinkedHashMap::new          // CRUCIAL: This map keeps the sorted order!
-//                ));
 
         Report report = new Report();
         Runnable avgTask = new AnalysisThread(report,players);
