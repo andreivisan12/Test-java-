@@ -1,0 +1,4 @@
+Name,team,pts,reb,ass
+Lebron,Lakers,109,50,32
+Curry,Lakers,124,30,24
+Durant,Lakers,64,22,45
